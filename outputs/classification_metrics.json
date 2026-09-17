@@ -1,0 +1,111 @@
+{
+  "golden_rows": 200,
+  "systems": {
+    "main pipeline": {
+      "intent_evaluated_rows": 0,
+      "escalation_evaluated_rows": 0,
+      "intent_accuracy": null,
+      "intent_f1_macro": null,
+      "intent_f1_per_class": {},
+      "escalation_accuracy": null
+    },
+    "simple baseline": {
+      "intent_evaluated_rows": 130,
+      "escalation_evaluated_rows": 200,
+      "intent_accuracy": 0.0,
+      "intent_f1_macro": 0.0,
+      "intent_f1_per_class": {
+        "Account & Login": {
+          "f1": 0.0,
+          "support": 15
+        },
+        "App & Technical Issue": {
+          "f1": 0.0,
+          "support": 10
+        },
+        "Driver Issue": {
+          "f1": 0.0,
+          "support": 15
+        },
+        "Fare & Pricing Issue": {
+          "f1": 0.0,
+          "support": 7
+        },
+        "Lost & Found": {
+          "f1": 0.0,
+          "support": 9
+        },
+        "Payment & Charges": {
+          "f1": 0.0,
+          "support": 23
+        },
+        "Promotions & Discounts": {
+          "f1": 0.0,
+          "support": 10
+        },
+        "Ride & Pickup Issue": {
+          "f1": 0.0,
+          "support": 12
+        },
+        "Safety & Vehicle Concern": {
+          "f1": 0.0,
+          "support": 7
+        },
+        "UberEATS Order Issue": {
+          "f1": 0.0,
+          "support": 22
+        }
+      },
+      "escalation_accuracy": 0.54
+    },
+    "trivial baseline": {
+      "intent_evaluated_rows": 130,
+      "escalation_evaluated_rows": 200,
+      "intent_accuracy": 0.17692307692307693,
+      "intent_f1_macro": 0.03006535947712418,
+      "intent_f1_per_class": {
+        "Account & Login": {
+          "f1": 0.0,
+          "support": 15
+        },
+        "App & Technical Issue": {
+          "f1": 0.0,
+          "support": 10
+        },
+        "Driver Issue": {
+          "f1": 0.0,
+          "support": 15
+        },
+        "Fare & Pricing Issue": {
+          "f1": 0.0,
+          "support": 7
+        },
+        "Lost & Found": {
+          "f1": 0.0,
+          "support": 9
+        },
+        "Payment & Charges": {
+          "f1": 0.3006535947712418,
+          "support": 23
+        },
+        "Promotions & Discounts": {
+          "f1": 0.0,
+          "support": 10
+        },
+        "Ride & Pickup Issue": {
+          "f1": 0.0,
+          "support": 12
+        },
+        "Safety & Vehicle Concern": {
+          "f1": 0.0,
+          "support": 7
+        },
+        "UberEATS Order Issue": {
+          "f1": 0.0,
+          "support": 22
+        }
+      },
+      "escalation_accuracy": 0.54
+    }
+  }
+}
