@@ -1,12 +1,21 @@
 {
-  "Payment & Charges": ["charged", "refund", "card", "wallet", "charge"],
-  "UberEATS Order Issue": ["food", "order", "delivery", "ubereats", "ordered"],
-  "Account & Login": ["password", "account", "verify", "verification", "sign in"],
-  "Driver Issue": ["rude", "driver calls", "cancelling", "abusive", "driver denied"],
-  "Ride & Pickup Issue": ["pickup", "pick up", "wait time", "minutes away", "waiting"],
-  "App & Technical Issue": ["app", "maps", "error", "eta", "website"],
-  "Promotions & Discounts": ["promo", "coupon", "credits", "flat fares", "discount"],
-  "Lost & Found": ["left my", "lost", "phone", "stole", "bag"],
-  "Fare & Pricing Issue": ["surge", "fare", "price", "overcharged", "flat fare"],
-  "Safety & Vehicle Concern": ["police", "emergency", "assault", "safety", "violence"]
+  "Account & Login": ["can't log in", "cannot log in", "login", "log in", "password", "locked out", "account suspended", "verify my account", "reset my account", "sign in", "account disabled"],
+
+  "App & Technical Issue": ["app crashed", "app not working", "won't load", "keeps crashing", "error message", "bug", "glitch", "app froze", "can't open the app", "not loading", "update the app"],
+
+  "Driver Issue": ["driver was rude", "driver refused", "driver cancelled", "driver didn't show", "no show", "driver took a wrong", "driver behavior", "complaint about my driver", "driver was late", "unprofessional driver"],
+
+  "Fare & Pricing Issue": ["overcharged", "fare was wrong", "price surge", "surge pricing", "fare estimate", "charged more than", "wrong fare", "price is too high", "fare dispute"],
+
+  "Lost & Found": ["left my", "lost my", "forgot my", "left something in the car", "phone in the car", "wallet in the car", "lost item", "found my"],
+
+  "Payment & Charges": ["charged twice", "double charged", "payment failed", "card was charged", "refund", "billing issue", "unauthorized charge", "payment method", "charged for a ride I didn't take"],
+
+  "Promotions & Discounts": ["promo code", "discount didn't apply", "coupon", "referral bonus", "promo not working", "discount code", "voucher"],
+
+  "Ride & Pickup Issue": ["driver couldn't find me", "wrong pickup location", "long wait", "waiting for", "ride cancelled", "cancellation fee", "pickup was late", "ride never arrived", "eta wrong"],
+
+  "Safety & Vehicle Concern": ["felt unsafe", "unsafe driving", "accident", "crash", "harassed", "assaulted", "vehicle was dirty", "car was damaged", "emergency", "reckless driving", "safety concern"],
+
+  "UberEATS Order Issue": ["food order", "missing items", "order never arrived", "wrong order", "eats order", "food was cold", "delivery issue", "restaurant cancelled", "food delivery"]
 }

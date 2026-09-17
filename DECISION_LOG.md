@@ -1,107 +1,27 @@
-# Engineering Decisions Log
+# Decision Log
 
-This document records 13 non-obvious engineering decisions made throughout the design, implementation, and evaluation of the Uber Support AI agent prototype. Each entry outlines the technical choice, rationale, trade-offs, and concrete implementation evidence in the repository.
+1. **Why did I choose this brand?** Uber_Support was chosen over higher-volume options like AmazonHelp or AppleSupport because its traffic naturally includes both routine issues such as fare questions, app bugs, and promo codes, as well as higher-stakes issues that may need escalation, such as safety concerns, driver complaints, and disputed charges. This made both the intent taxonomy and the auto-handle/escalate decision more meaningful to design and evaluate than choosing a brand with a narrower or more uniform mix of customer issues.
 
----
+2. **Why did I define these ten intents, and where do their boundaries overlap?** The ten intents (Account & Login, App & Technical Issue, Driver Issue, Fare & Pricing Issue, Lost & Found, Payment & Charges, Promotions & Discounts, Ride & Pickup Issue, Safety & Vehicle Concern, and UberEATS Order Issue) were defined by reading real customer messages in the sampled dataset and grouping them based on the actual underlying problem rather than just the words used in the message. The distribution across the 200-example golden set was App & Technical Issue: 43, Account & Login: 28, Payment & Charges: 28, UberEATS Order Issue: 27, Ride & Pickup Issue: 19, Driver Issue: 19, Promotions & Discounts: 11, Lost & Found: 9, Safety & Vehicle Concern: 9, and Fare & Pricing Issue: 7. This reflects the actual traffic patterns instead of creating an artificially balanced dataset. The clearest overlap is between Driver Issue and Safety & Vehicle Concern because a complaint about a driver's behavior can become a safety concern depending on how serious it is. I handled this by reserving Safety & Vehicle Concern for cases involving explicit danger, harassment, accidents, or vehicle-condition risks, while Driver Issue is used for normal behavioral or service complaints that do not reach that level.
 
-### 1. Few-Shot In-Context Intent Classification with JSON Schema
-- **Decision**: Implemented intent classification as a prompted few-shot task producing a strict JSON payload (`{"intent": "...", "confidence": float}`) constrained to 10 predefined operational categories, rather than training a custom BERT or fine-tuned classifier.
-- **Why we chose it**: Allowed rapid zero-infrastructure iteration on intent taxonomy definitions, flexible prompt adjustments, and native probability estimation without managing training pipelines, model weights, or specialized GPU serving.
-- **Trade-off / downside**: Incurs higher token latency per classification (~1–2 seconds per inference) and is vulnerable to occasional non-compliant JSON outputs or hallucinations when messages are ambiguous.
-- **Evidence in current implementation**: [`src/classifier/intent_classifier.py`](file:///c:/Users/yadua/OneDrive/Documents/Ai%20Ass/AI%20Agent%20For%20Cs/src/classifier/intent_classifier.py#L22-L72), where `INTENT_DEFINITIONS` and few-shot pairs are structured into a system prompt enforcing JSON response formatting.
+3. **Why did I reconstruct graph-connected threads rather than use tweet-reply pairs?** Single tweet-reply pairs can lose important multi-turn context because many real customer-support conversations involve several back-and-forth messages before the issue is resolved. I used response_tweet_id and in_response_to_tweet_id to reconstruct complete threads so that the full conversation context is preserved. This is useful for intent classification because a later message may clarify an unclear first message, and it also helps when judging whether a historical interaction was actually resolved.
 
----
+4. **Why is the processed sample seeded, and why is the seed value appropriate?** I used a fixed seed of 42 while selecting the 2,500-thread subsample so that anyone running the pipeline again can get the same sample without processing the complete dataset of around 2.8 million rows. The exact value 42 is not important by itself; what matters is that the seed remains fixed. This makes the experiment reproducible and allows the headline results to be recreated from the documented sample.
 
-### 2. Conservative Numeric Confidence Parsing with 0.00 Uncertainty Fallback
-- **Decision**: Extracted confidence as an explicit float bounded strictly between 0.0 and 1.0, defaulting immediately to `0.00` if parsing fails, if the intent is unrecognized, or if schema validation fails.
-- **Why we chose it**: Ensured that any generative failure, unparseable response, or malformed JSON is treated as maximum uncertainty, preventing the downstream pipeline from acting on unvalidated outputs.
-- **Trade-off / downside**: Over-penalizes minor syntax anomalies (such as trailing text or unescaped quotes) by forcing confidence to zero, which subsequently triggers defensive human escalation.
-- **Evidence in current implementation**: [`src/classifier/intent_classifier.py`](file:///c:/Users/yadua/OneDrive/Documents/Ai%20Ass/AI%20Agent%20For%20Cs/src/classifier/intent_classifier.py#L42-L52), where invalid schema keys or unparseable numbers return `IntentPrediction(intent="Unassigned", confidence=0.0)`.
+5. **Why did I choose this golden-set sampling strategy over random-message sampling?** The golden set was selected from the already-seeded 2,500-thread sample, with 200 threads selected using seed 7, rather than randomly selecting individual messages from the complete raw dataset. I did this so that every golden-set example has its complete thread context available for retrieval and evaluation. This avoids creating a golden set containing messages from conversations that do not exist in the retrieval pool used by the actual pipeline.
 
----
+6. **How did I define a resolved historical thread, and what can that proxy get wrong?** A historical thread is considered resolved when the brand account replied and there was no further customer follow-up tweet in that thread. This gives us a practical way to identify potentially resolved interactions, but it is not perfect. A customer remaining silent does not always mean they were satisfied. They may have given up, moved to another support channel such as phone or in-app support, or simply decided not to reply on Twitter. Because of this, some of the historical resolutions used for grounding may not actually represent successful outcomes.
 
-### 3. Sparse TF-IDF Cosine Retrieval over Dense Vector Databases
-- **Decision**: Used an in-memory scikit-learn `TfidfVectorizer` with sublinear term-frequency scaling over 2,500 historical threads instead of deploying a dense vector store (e.g., Pinecone, Chroma, or embedding bi-encoders).
-- **Why we chose it**: Customer support tweets rely heavily on exact domain tokens (e.g., "Paytm", "flat fare", "cancellation fee", "McDelivery"), which TF-IDF matches with microsecond latency and zero external service overhead or embedding costs.
-- **Trade-off / downside**: Cannot capture semantic synonyms or conceptual paraphrasing that lack literal lexical overlap (e.g., failing to connect "driver took off" with "missing item").
-- **Evidence in current implementation**: [`src/retrieval/similar_threads.py`](file:///c:/Users/yadua/OneDrive/Documents/Ai%20Ass/AI%20Agent%20For%20Cs/src/retrieval/similar_threads.py#L25-L35), which fits a 10,000-feature `TfidfVectorizer(sublinear_tf=True, stop_words="english")` directly in Python.
+7. **Why did I choose TF-IDF cosine retrieval over embeddings or a vector database?** I chose TF-IDF with cosine similarity because it does not require additional dependencies, embedding models, hosted infrastructure, or a vector database. It also runs fast enough for the relatively small retrieval dataset of a few thousand threads and is easy to understand and debug line by line. Considering the one-day development timeline and the assignment's preference for avoiding unnecessary engineering complexity, using a vector database would have added more complexity than value at the current scale. If the project were scaled to a much larger dataset, embedding-based semantic retrieval and a vector database could be considered.
 
----
+8. **Why did I select the current few-shot examples and confidence format for classification?** The classifier uses a few-shot prompt containing labelled examples for each intent taken from real sample data. This means the model sees actual in-domain customer language instead of depending only on the names of the intents. The confidence value is self-reported by the model on each classification call rather than calculated from raw token log-probabilities because this approach is simpler to implement consistently across different API providers and works with the threshold-based escalation logic. The limitation is that self-reported confidence may not be as well calibrated as a true probability estimate, meaning that the model can sometimes be confident even when its prediction is incorrect.
 
-### 4. Graph-Connected Thread Reconstruction as Resolution Proxy
-- **Decision**: Reconstructed complete conversational trees via parent pointer traversal (`in_reply_to_tweet_id`) rather than treating single customer tweets and isolated replies as disconnected pairs.
-- **Why we chose it**: A single support reply often only asks for customer details; full threads are necessary to verify whether a resolution link was sent, whether the customer pushed back, or whether the ticket concluded.
-- **Trade-off / downside**: Increases preprocessing complexity, requires resolving circular or broken Twitter reply references, and introduces variable-length text into the retrieval index.
-- **Evidence in current implementation**: [`src/data_prep/filter_brand.py`](file:///c:/Users/yadua/OneDrive/Documents/Ai%20Ass/AI%20Agent%20For%20Cs/src/data_prep/filter_brand.py#L22-L78), which traces tweet parent-child graphs to reconstruct full dialogue threads.
+9. **Why did I require generation to ground itself in retrieved threads?** The assignment specifically requires generated replies to be grounded in how the brand historically resolved similar issues. Because of this, the generation prompt receives retrieved historical threads and is instructed to use them while producing the response instead of generating a completely generic reply from the model's general knowledge. This helps reduce hallucination and also gives us something that can be evaluated through the LLM judge's groundedness score.
 
----
+10. **Why are these escalation rules and thresholds appropriate, and what risks remain?** The pipeline automatically handles an issue when the classifier confidence is at least 0.60 and no explicit escalation rule is triggered. Safety-related issues, low-confidence predictions, negative sentiment, and other higher-risk situations can trigger escalation. I selected 0.60 as a reasonable starting point between over-escalating routine problems and automatically handling uncertain cases. However, this value was selected heuristically rather than being tuned using a labelled validation set, so it is a known limitation. Once the failure analysis is completed, the threshold should be reconsidered based on cases where the system is confident but still makes the wrong decision.
 
-### 5. Mandatory Self-Thread Exclusion During Retrieval
-- **Decision**: Explicitly filtered the query message's own `thread_id` out of the candidate retrieval pool (`exclude_thread_id`).
-- **Why we chose it**: Prevented evaluation data leakage where an incoming message from the golden set or sample corpus retrieves its own historical resolution, creating an artificial shortcut for reply generation.
-- **Trade-off / downside**: Slightly increases retrieval index bookkeeping by requiring query-time identity checks and mask manipulation across similarity matrices.
-- **Evidence in current implementation**: [`src/retrieval/similar_threads.py`](file:///c:/Users/yadua/OneDrive/Documents/Ai%20Ass/AI%20Agent%20For%20Cs/src/retrieval/similar_threads.py#L46-L53), which checks `if candidate_id == exclude_thread_id: continue` before populating top-$k$ results.
+11. **Why does the simple baseline use these keywords and reply templates?** The keywords were selected based on common phrases associated with each intent, such as "charged twice" for Payment & Charges or "app crashed" for App & Technical Issue. They were not specifically tuned against the golden set because the purpose of the simple baseline is to represent a low-effort, no-ML approach rather than being a competitive model. It provides a basic floor against which the actual AI pipeline can be compared. Its low match rate of 22 out of 200 messages is therefore expected.
 
----
+12. **Why did I include a trivial baseline, and what does it establish?** The trivial baseline always predicts the majority intent, Payment & Charges, and always escalates the issue. Its purpose is to establish an absolute floor for the system. Without a baseline, an accuracy number by itself does not provide enough context. With the trivial baseline, we can see whether the actual pipeline is learning meaningful distinctions between customer problems instead of simply taking advantage of the imbalance in the intent distribution.
 
-### 6. Retrieval-Constrained Generation with Empathy Prompts
-- **Decision**: Conditioned reply generation strictly on the top-3 retrieved historical resolutions, explicitly prompting the model to state in-app next steps and forbidding the invention of specific dollar amounts or promises.
-- **Why we chose it**: Grounding generative replies in verified corporate precedent eliminates catastrophic hallucinations (such as promising full refunds or quoting incorrect fare policies) while maintaining empathetic language.
-- **Trade-off / downside**: When retrieved threads are unhelpful or tangentially related, the drafted reply can become repetitive, generic, or over-cautious, directing users to generic help links.
-- **Evidence in current implementation**: [`src/generation/reply_generator.py`](file:///c:/Users/yadua/OneDrive/Documents/Ai%20Ass/AI%20Agent%20For%20Cs/src/generation/reply_generator.py#L22-L38), where the prompt explicitly instructs: "Do not invent policies or make promises not supported by the evidence."
-
----
-
-### 7. Decoupled Programmatic Escalation Engine vs. Generative LLM Discretion
-- **Decision**: Isolated escalation decisions into a separate, deterministic Python module (`decide_escalation`) rather than allowing the LLM to decide whether to escalate in its completion prompt.
-- **Why we chose it**: Safety boundaries and escalation compliance must be 100% auditable, deterministic, and immune to prompt injection or model mood/temperature variance.
-- **Trade-off / downside**: Static rule sets lack subtle contextual reasoning, resulting in misclassifying nuanced frustration or novel grievance patterns that do not match hardcoded triggers.
-- **Evidence in current implementation**: [`src/escalation/decide.py`](file:///c:/Users/yadua/OneDrive/Documents/Ai%20Ass/AI%20Agent%20For%20Cs/src/escalation/decide.py#L12-L42), which applies sequential if/else checks on safety keywords, intents, and confidence thresholds.
-
----
-
-### 8. Hardcoded Keyword Safety Triggers for Immediate Human Handover
-- **Decision**: Established a hardcoded keyword list (`police`, `assault`, `emergency`, `accident`, `legal`, `lawyer`, `crash`, `injury`) that automatically triggers escalation regardless of classifier intent or confidence.
-- **Why we chose it**: Guarantees zero-tolerance protection against automated handling of high-liability scenarios, ensuring legal and personal safety complaints are immediately routed to human specialists.
-- **Trade-off / downside**: Causes over-escalation on benign or metaphorical usage (e.g., customer saying "my app crashed" or "your driver almost had an accident").
-- **Evidence in current implementation**: [`src/escalation/decide.py`](file:///c:/Users/yadua/OneDrive/Documents/Ai%20Ass/AI%20Agent%20For%20Cs/src/escalation/decide.py#L15-L23), which scans `text.lower()` for explicit safety tokens and forces `action="escalate"`.
-
----
-
-### 9. Defensive Escalation via Strict Confidence Thresholding ($< 0.60$)
-- **Decision**: Enforced an escalation trigger whenever intent classifier confidence drops below `0.60`.
-- **Why we chose it**: Operates on a "fail-safe" principle: when the automated pipeline is uncertain about a customer's underlying problem, it should hand off to a human rather than issue a potentially irrelevant automated response.
-- **Trade-off / downside**: Resulted in 46 over-escalation errors on short, polite, or low-context messages (e.g., "Thanks", "done") where low classifier confidence forced human intervention unnecessarily.
-- **Evidence in current implementation**: [`src/escalation/decide.py`](file:///c:/Users/yadua/OneDrive/Documents/Ai%20Ass/AI%20Agent%20For%20Cs/src/escalation/decide.py#L29-L33), which marks `action="escalate"` with reason `"Escalated because classifier confidence ... is below 0.60"`.
-
----
-
-### 10. Configurable Regex Baseline with Fixed Auditable Templates
-- **Decision**: Implemented `baselines/simple.py` using 50 data-derived keywords from `baselines/intent_keywords.json` and paired them with static, pre-approved reply templates.
-- **Why we chose it**: Provided a realistic benchmark of what a zero-latency, zero-cost deterministic rule engine achieves, verifying whether an LLM actually adds net business value over classic keyword matching.
-- **Trade-off / downside**: Regex patterns require manual maintenance and brittle curation, scoring low on intent recall when customers use unexpected synonyms or colloquialisms.
-- **Evidence in current implementation**: [`baselines/simple.py`](file:///c:/Users/yadua/OneDrive/Documents/Ai%20Ass/AI%20Agent%20For%20Cs/baselines/simple.py#L14-L46) and [`baselines/intent_keywords.json`](file:///c:/Users/yadua/OneDrive/Documents/Ai%20Ass/AI%20Agent%20For%20Cs/baselines/intent_keywords.json).
-
----
-
-### 11. Majority-Class Trivial Baseline for Skew Calibration
-- **Decision**: Created `baselines/trivial.py`, which constantly predicts the empirical training majority intent (`Payment & Charges`) and always escalates (`escalate`).
-- **Why we chose it**: Established the true floor for multi-class classification and demonstrated that high raw accuracy in unbalanced datasets can be deceptive without Macro F1 tracking.
-- **Trade-off / downside**: The trivial baseline serves purely as an evaluation sanity check and has zero utility in production customer support.
-- **Evidence in current implementation**: [`baselines/trivial.py`](file:///c:/Users/yadua/OneDrive/Documents/Ai%20Ass/AI%20Agent%20For%20Cs/baselines/trivial.py#L13-L22), which calculates the majority class dynamically and outputs a constant prediction vector.
-
----
-
-### 12. Explicit Blank-Label Evaluation Policy for Ambiguous Data
-- **Decision**: Permitted 70 out of 200 golden-set rows to remain blank for ground-truth intent, computing intent accuracy and Macro F1 strictly over the 130 non-empty annotated rows.
-- **Why we chose it**: Acknowledged that ambiguous, fragmented multi-turn utterances (e.g., "I did !", "nothing new") have no single objective intent, preventing artificial ground truth from distorting model evaluation.
-- **Trade-off / downside**: Causes the intent evaluation denominator ($N=130$) to differ from the escalation evaluation denominator ($N=200$), which can confuse superficial readers if not explicitly explained.
-- **Evidence in current implementation**: [`evaluation/harness.py`](file:///c:/Users/yadua/OneDrive/Documents/Ai%20Ass/AI%20Agent%20For%20Cs/evaluation/harness.py#L56-L64), which conditionally appends pairs to `intent_pairs` only when `true_intent` is non-empty.
-
----
-
-### 13. Deterministic Seed Pinning and Provider-Agnostic LLM Client Abstraction
-- **Decision**: Pinned all random sampling across the project (`seed=42` for dataset sampling, `seed=7` for human agreement template selection) and abstracted LLM calls behind a generic OpenAI-compatible interface.
-- **Why we chose it**: Pinned seeds ensure bit-for-bit test repeatability across environments, while the flexible endpoint wrapper enabled instant fallback to a local Ollama daemon (`llama3.2:latest`) when commercial API quotas or network limits were reached.
-- **Trade-off / downside**: Local models run at lower tokens-per-second throughput on standard developer hardware compared to hosted cloud API clusters.
-- **Evidence in current implementation**: [`src/data_prep/subsample.py`](file:///c:/Users/yadua/OneDrive/Documents/Ai%20Ass/AI%20Agent%20For%20Cs/src/data_prep/subsample.py#L49), [`evaluation/judge_agreement.py`](file:///c:/Users/yadua/OneDrive/Documents/Ai%20Ass/AI%20Agent%20For%20Cs/evaluation/judge_agreement.py#L114), and [`src/common/llm.py`](file:///c:/Users/yadua/OneDrive/Documents/Ai%20Ass/AI%20Agent%20For%20Cs/src/common/llm.py#L35-L68).
+13. **Why did I choose these metrics, aggregation method, and bla**
