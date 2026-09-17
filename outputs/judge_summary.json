@@ -1,0 +1,18 @@
+{
+  "systems": {
+    "main pipeline": {
+      "input_rows": 30,
+      "completed_rows": 30,
+      "skipped_rows": 0,
+      "average_judge_score": 2.933326666666667,
+      "output": "outputs/pipeline_judgements.csv"
+    },
+    "simple baseline": {
+      "input_rows": 0,
+      "completed_rows": 0,
+      "skipped_rows": 0,
+      "average_judge_score": null,
+      "output": "outputs/simple_judgements.csv"
+    }
+  }
+}

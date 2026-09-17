@@ -1,12 +1,12 @@
 {
-  "Fare & Pricing Issue": [],
-  "Payment & Charges": [],
-  "Account & Login": [],
-  "App & Technical Issue": [],
-  "Driver Issue": [],
-  "Safety & Vehicle Concern": [],
-  "Ride & Pickup Issue": [],
-  "Lost & Found": [],
-  "UberEATS Order Issue": [],
-  "Promotions & Discounts": []
+  "Payment & Charges": ["charged", "refund", "card", "wallet", "charge"],
+  "UberEATS Order Issue": ["food", "order", "delivery", "ubereats", "ordered"],
+  "Account & Login": ["password", "account", "verify", "verification", "sign in"],
+  "Driver Issue": ["rude", "driver calls", "cancelling", "abusive", "driver denied"],
+  "Ride & Pickup Issue": ["pickup", "pick up", "wait time", "minutes away", "waiting"],
+  "App & Technical Issue": ["app", "maps", "error", "eta", "website"],
+  "Promotions & Discounts": ["promo", "coupon", "credits", "flat fares", "discount"],
+  "Lost & Found": ["left my", "lost", "phone", "stole", "bag"],
+  "Fare & Pricing Issue": ["surge", "fare", "price", "overcharged", "flat fare"],
+  "Safety & Vehicle Concern": ["police", "emergency", "assault", "safety", "violence"]
 }

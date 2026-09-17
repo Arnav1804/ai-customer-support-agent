@@ -42,8 +42,16 @@ def parse_score(text: str) -> JudgeScore:
         cleaned = cleaned.split("\n", 1)[-1].rsplit("```", 1)[0].strip()
     try:
         value = json.loads(cleaned)
-    except json.JSONDecodeError as exc:
-        raise LLMError(f"Judge returned invalid JSON: {exc}") from exc
+    except json.JSONDecodeError:
+        import re
+        match = re.search(r"\{.*?\}", cleaned, re.DOTALL)
+        if match:
+            try:
+                value = json.loads(match.group(0))
+            except json.JSONDecodeError as exc:
+                raise LLMError(f"Judge returned invalid JSON: {exc}") from exc
+        else:
+            raise LLMError(f"Judge returned invalid JSON in response: {text[:100]}")
     required = ("relevance", "groundedness", "tone")
     if not isinstance(value, dict) or any(key not in value for key in required):
         raise LLMError("Judge JSON must contain relevance, groundedness, and tone.")
@@ -142,12 +150,13 @@ def score_rows(
 def main() -> None:
     parser = argparse.ArgumentParser(description="Run an LLM-as-judge over pipeline and simple replies.")
     parser.add_argument("--golden", default="evaluation/golden_set.csv")
-    parser.add_argument("--pipeline", default="outputs/pipeline_predictions.csv")
+    parser.add_argument("--pipeline", "--input", dest="pipeline", default="outputs/pipeline_predictions.csv")
     parser.add_argument("--simple-replies", default="outputs/simple_replies.csv")
     parser.add_argument("--sample", default="data/processed/uber_support_sample.csv")
-    parser.add_argument("--pipeline-output", default="outputs/main_pipeline_judgements.csv")
+    parser.add_argument("--pipeline-output", "--output", dest="pipeline_output", default="outputs/main_pipeline_judgements.csv")
     parser.add_argument("--simple-output", default="outputs/simple_judgements.csv")
-    parser.add_argument("--summary-output", default="outputs/judge_summary.json")
+    parser.add_argument("--summary-output", "--summary", dest="summary_output", default="outputs/judge_summary.json")
+    parser.add_argument("--max-eval", type=int, default=None, help="Maximum number of rows to evaluate per system")
     args = parser.parse_args()
     logging.basicConfig(level=logging.WARNING, format="%(levelname)s: %(message)s")
 
@@ -164,14 +173,34 @@ def main() -> None:
         client = UnavailableClient(str(exc))
 
     try:
+        pipeline_rows = read_rows(Path(args.pipeline))
+        if args.max_eval:
+            pipeline_rows = pipeline_rows[:args.max_eval]
+        pipeline_out = Path(args.pipeline_output)
         pipeline_summary = score_rows(
-            read_rows(Path(args.pipeline)), gold_by_thread, "drafted_reply", thread_texts, client,
-            Path(args.pipeline_output),
+            pipeline_rows, gold_by_thread, "drafted_reply", thread_texts, client,
+            pipeline_out,
         )
-        simple_summary = score_rows(
-            read_rows(Path(args.simple_replies)), gold_by_thread, "predicted_reply", {}, client,
-            Path(args.simple_output),
-        )
+        # Mirror output to both pipeline_judgements.csv and main_pipeline_judgements.csv if needed
+        mirror_target = Path("outputs/main_pipeline_judgements.csv") if pipeline_out.name == "pipeline_judgements.csv" else Path("outputs/pipeline_judgements.csv")
+        if pipeline_out.exists():
+            mirror_target.parent.mkdir(parents=True, exist_ok=True)
+            mirror_target.write_bytes(pipeline_out.read_bytes())
+
+        # If max_eval is specified and simple_replies wasn't explicitly requested, skip simple evaluation to conserve resources
+        simple_path = Path(args.simple_replies)
+        if args.max_eval and "--simple-replies" not in sys.argv:
+            simple_summary = {"input_rows": 0, "completed_rows": 0, "skipped_rows": 0, "average_judge_score": None, "output": str(args.simple_output)}
+        elif simple_path.exists():
+            simple_rows = read_rows(simple_path)
+            if args.max_eval:
+                simple_rows = simple_rows[:args.max_eval]
+            simple_summary = score_rows(
+                simple_rows, gold_by_thread, "predicted_reply", {}, client,
+                Path(args.simple_output),
+            )
+        else:
+            simple_summary = {"input_rows": 0, "completed_rows": 0, "skipped_rows": 0, "average_judge_score": None, "output": str(args.simple_output)}
     except FileNotFoundError as exc:
         raise SystemExit(f"Required reply file not found: {exc}. Run the corresponding system first.") from exc
     summary = {"systems": {"main pipeline": pipeline_summary, "simple baseline": simple_summary}}
@@ -179,7 +208,8 @@ def main() -> None:
     summary_path.parent.mkdir(parents=True, exist_ok=True)
     summary_path.write_text(json.dumps(summary, indent=2), encoding="utf-8")
     print(f"Main pipeline judge: {pipeline_summary['completed_rows']:,} completed, {pipeline_summary['skipped_rows']:,} skipped.")
-    print(f"Simple baseline judge: {simple_summary['completed_rows']:,} completed, {simple_summary['skipped_rows']:,} skipped.")
+    if simple_summary['completed_rows'] > 0:
+        print(f"Simple baseline judge: {simple_summary['completed_rows']:,} completed, {simple_summary['skipped_rows']:,} skipped.")
     print(f"Wrote judge summary to {summary_path}")
 
 

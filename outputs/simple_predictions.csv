@@ -1,185 +1,185 @@
 thread_id,predicted_intent,predicted_escalate,predicted_reason
 thread_1399441,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_998783,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_998783,Account & Login,auto_handle,Matched configured pattern(s): account
 thread_305336,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_2107513,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_433700,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_973160,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_1445631,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_1048197,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_1048197,App & Technical Issue,auto_handle,Matched configured pattern(s): app
 thread_356154,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_1703153,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_2637022,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_384104,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2730523,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_1231012,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_2730523,Lost & Found,auto_handle,Matched configured pattern(s): lost
+thread_1231012,Account & Login,auto_handle,"Matched configured pattern(s): password, account"
 thread_859680,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_2827699,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_796461,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_1392485,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_562395,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_1234810,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_562395,Account & Login,auto_handle,Matched configured pattern(s): account
+thread_1234810,App & Technical Issue,auto_handle,Matched configured pattern(s): eta
 thread_889605,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_601789,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_2891182,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_1633284,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_904735,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2782113,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_1467468,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2806743,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_1633284,UberEATS Order Issue,auto_handle,"Matched configured pattern(s): food, order, ordered"
+thread_904735,UberEATS Order Issue,auto_handle,Matched configured pattern(s): order
+thread_2782113,Payment & Charges,auto_handle,Matched configured pattern(s): refund
+thread_1467468,App & Technical Issue,auto_handle,Matched configured pattern(s): maps
+thread_2806743,UberEATS Order Issue,auto_handle,Matched configured pattern(s): ubereats
 thread_2798522,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2379053,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_270406,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_1428654,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2112993,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2954602,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2976083,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_1778321,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_2379053,Account & Login,auto_handle,Matched configured pattern(s): account
+thread_270406,UberEATS Order Issue,auto_handle,"Matched configured pattern(s): food, delivery"
+thread_1428654,UberEATS Order Issue,auto_handle,"Matched configured pattern(s): food, order"
+thread_2112993,UberEATS Order Issue,auto_handle,Matched configured pattern(s): order
+thread_2954602,Fare & Pricing Issue,auto_handle,"Matched configured pattern(s): fare, flat fare"
+thread_2976083,App & Technical Issue,auto_handle,"Matched configured pattern(s): app, maps, eta"
+thread_1778321,Payment & Charges,auto_handle,"Matched configured pattern(s): charged, charge"
 thread_2057316,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_2294391,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_1815312,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_1626295,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_1404914,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_1821916,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_1626295,Payment & Charges,auto_handle,"Matched configured pattern(s): charged, refund, charge"
+thread_1404914,Lost & Found,auto_handle,"Matched configured pattern(s): left my, phone"
+thread_1821916,App & Technical Issue,auto_handle,Matched configured pattern(s): app
 thread_1833563,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2071675,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_663963,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_2071675,Driver Issue,auto_handle,"Matched configured pattern(s): rude, cancelling, abusive"
+thread_663963,UberEATS Order Issue,auto_handle,"Matched configured pattern(s): order, ordered"
 thread_952636,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_441669,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_572012,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_441669,UberEATS Order Issue,auto_handle,Matched configured pattern(s): order
+thread_572012,Payment & Charges,auto_handle,"Matched configured pattern(s): charged, charge"
 thread_2794435,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_2816686,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2171780,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2933982,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2538520,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2460069,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2727142,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2882279,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2920570,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2177615,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2984666,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2479164,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2388092,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2609401,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2487367,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2344050,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_2171780,Account & Login,auto_handle,"Matched configured pattern(s): password, account, verification"
+thread_2933982,Ride & Pickup Issue,auto_handle,Matched configured pattern(s): pick up
+thread_2538520,App & Technical Issue,auto_handle,"Matched configured pattern(s): app, eta"
+thread_2460069,Driver Issue,auto_handle,"Matched configured pattern(s): driver calls, driver denied"
+thread_2727142,Lost & Found,auto_handle,Matched configured pattern(s): phone
+thread_2882279,Payment & Charges,auto_handle,"Matched configured pattern(s): charged, refund, charge"
+thread_2920570,Ride & Pickup Issue,auto_handle,"Matched configured pattern(s): pickup, wait time"
+thread_2177615,Payment & Charges,auto_handle,Matched configured pattern(s): card
+thread_2984666,Lost & Found,auto_handle,Matched configured pattern(s): bag
+thread_2479164,Payment & Charges,auto_handle,"Matched configured pattern(s): charged, charge"
+thread_2388092,UberEATS Order Issue,auto_handle,"Matched configured pattern(s): food, order, ordered"
+thread_2609401,Lost & Found,auto_handle,Matched configured pattern(s): phone
+thread_2487367,Payment & Charges,auto_handle,"Matched configured pattern(s): wallet, charge"
+thread_2344050,Account & Login,auto_handle,Matched configured pattern(s): verify
 thread_443131,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_2194049,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_583010,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_454650,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2823454,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_583010,App & Technical Issue,auto_handle,"Matched configured pattern(s): app, error"
+thread_454650,App & Technical Issue,auto_handle,Matched configured pattern(s): eta
+thread_2823454,Fare & Pricing Issue,auto_handle,Matched configured pattern(s): surge
 thread_1362014,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_1965700,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_55980,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_2642829,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_954951,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_954951,Payment & Charges,auto_handle,Matched configured pattern(s): card
 thread_1209936,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_436527,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_412278,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_1417274,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2078219,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_1213584,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_436527,App & Technical Issue,auto_handle,Matched configured pattern(s): app
+thread_412278,Account & Login,auto_handle,Matched configured pattern(s): account
+thread_1417274,Driver Issue,auto_handle,Matched configured pattern(s): driver denied
+thread_2078219,App & Technical Issue,auto_handle,Matched configured pattern(s): app
+thread_1213584,Ride & Pickup Issue,auto_handle,Matched configured pattern(s): pick up
 thread_2652753,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_707603,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_1627649,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_814953,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_607442,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2408910,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_814953,App & Technical Issue,auto_handle,Matched configured pattern(s): app
+thread_607442,UberEATS Order Issue,auto_handle,Matched configured pattern(s): ubereats
+thread_2408910,UberEATS Order Issue,auto_handle,Matched configured pattern(s): order
 thread_1392516,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_895037,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_1475496,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_2512905,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2547353,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2586448,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2806726,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2241749,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_718617,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2724636,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2484347,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2912293,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2381973,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2762792,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2965798,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_520827,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_2547353,Fare & Pricing Issue,auto_handle,"Matched configured pattern(s): fare, price"
+thread_2586448,UberEATS Order Issue,auto_handle,"Matched configured pattern(s): food, order, ordered"
+thread_2806726,Payment & Charges,auto_handle,"Matched configured pattern(s): charged, wallet, charge"
+thread_2241749,App & Technical Issue,auto_handle,Matched configured pattern(s): app
+thread_718617,Payment & Charges,auto_handle,Matched configured pattern(s): refund
+thread_2724636,UberEATS Order Issue,auto_handle,Matched configured pattern(s): order
+thread_2484347,App & Technical Issue,auto_handle,Matched configured pattern(s): app
+thread_2912293,App & Technical Issue,auto_handle,Matched configured pattern(s): app
+thread_2381973,Promotions & Discounts,auto_handle,Matched configured pattern(s): credits
+thread_2762792,App & Technical Issue,auto_handle,Matched configured pattern(s): app
+thread_2965798,Safety & Vehicle Concern,auto_handle,Matched configured pattern(s): assault
+thread_520827,Payment & Charges,auto_handle,"Matched configured pattern(s): card, charge"
 thread_996961,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_1759722,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2932317,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2637037,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_601804,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_557231,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2686891,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_470912,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2823412,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_470948,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_1759722,UberEATS Order Issue,auto_handle,Matched configured pattern(s): food
+thread_2932317,Lost & Found,auto_handle,"Matched configured pattern(s): lost, phone"
+thread_2637037,Ride & Pickup Issue,auto_handle,Matched configured pattern(s): waiting
+thread_601804,UberEATS Order Issue,auto_handle,Matched configured pattern(s): food
+thread_557231,App & Technical Issue,auto_handle,"Matched configured pattern(s): app, error"
+thread_2686891,Account & Login,auto_handle,"Matched configured pattern(s): account, verify, verification"
+thread_470912,Payment & Charges,auto_handle,Matched configured pattern(s): card
+thread_2823412,Payment & Charges,auto_handle,Matched configured pattern(s): charge
+thread_470948,Payment & Charges,auto_handle,Matched configured pattern(s): refund
 thread_902458,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_2446460,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_1380760,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_254829,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_254829,App & Technical Issue,auto_handle,Matched configured pattern(s): app
 thread_1185188,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_635837,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_2541804,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2731489,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2739541,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_1273689,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_1063933,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_1450927,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_2731489,Account & Login,auto_handle,Matched configured pattern(s): account
+thread_2739541,Account & Login,auto_handle,Matched configured pattern(s): account
+thread_1273689,Account & Login,auto_handle,Matched configured pattern(s): verify
+thread_1063933,App & Technical Issue,auto_handle,Matched configured pattern(s): app
+thread_1450927,Lost & Found,auto_handle,Matched configured pattern(s): phone
 thread_1541176,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_21985,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_21985,UberEATS Order Issue,auto_handle,"Matched configured pattern(s): order, ordered"
 thread_2241732,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_997265,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_334146,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_235538,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_1327100,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_235538,Payment & Charges,auto_handle,Matched configured pattern(s): charge
+thread_1327100,Account & Login,auto_handle,Matched configured pattern(s): account
 thread_332108,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_966757,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_883233,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_966757,Ride & Pickup Issue,auto_handle,Matched configured pattern(s): waiting
+thread_883233,Payment & Charges,auto_handle,Matched configured pattern(s): card
 thread_667887,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_1905339,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_1905339,Payment & Charges,auto_handle,Matched configured pattern(s): charge
 thread_590073,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_275040,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2414625,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_486874,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_275040,Ride & Pickup Issue,auto_handle,Matched configured pattern(s): minutes away
+thread_2414625,App & Technical Issue,auto_handle,Matched configured pattern(s): app
+thread_486874,UberEATS Order Issue,auto_handle,Matched configured pattern(s): food
 thread_1617866,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_479793,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2145766,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_129433,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2339250,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_479793,Payment & Charges,auto_handle,Matched configured pattern(s): refund
+thread_2145766,Driver Issue,auto_handle,Matched configured pattern(s): rude
+thread_129433,Promotions & Discounts,auto_handle,Matched configured pattern(s): credits
+thread_2339250,Driver Issue,auto_handle,Matched configured pattern(s): driver calls
 thread_1453816,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_645050,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_1265277,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_79360,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2762934,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2713271,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2445339,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2207958,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2960615,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_1822421,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2552581,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_645050,Account & Login,auto_handle,Matched configured pattern(s): account
+thread_1265277,Payment & Charges,auto_handle,"Matched configured pattern(s): charged, charge"
+thread_79360,Payment & Charges,auto_handle,"Matched configured pattern(s): refund, card"
+thread_2762934,Payment & Charges,auto_handle,Matched configured pattern(s): charge
+thread_2713271,App & Technical Issue,auto_handle,Matched configured pattern(s): app
+thread_2445339,Lost & Found,auto_handle,Matched configured pattern(s): phone
+thread_2207958,App & Technical Issue,auto_handle,Matched configured pattern(s): app
+thread_2960615,Account & Login,auto_handle,"Matched configured pattern(s): password, account"
+thread_1822421,Lost & Found,auto_handle,Matched configured pattern(s): phone
+thread_2552581,Lost & Found,auto_handle,"Matched configured pattern(s): lost, phone, stole"
 thread_232607,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_317312,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_1106703,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_317312,Payment & Charges,auto_handle,"Matched configured pattern(s): charged, charge"
+thread_1106703,UberEATS Order Issue,auto_handle,Matched configured pattern(s): order
 thread_902451,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_683181,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_683181,Fare & Pricing Issue,auto_handle,"Matched configured pattern(s): fare, flat fare"
 thread_992142,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_854616,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_854616,UberEATS Order Issue,auto_handle,Matched configured pattern(s): delivery
 thread_2969623,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_1660114,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_1893070,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_1660114,Account & Login,auto_handle,Matched configured pattern(s): account
+thread_1893070,UberEATS Order Issue,auto_handle,Matched configured pattern(s): food
 thread_725970,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_1451656,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_1451656,App & Technical Issue,auto_handle,Matched configured pattern(s): app
 thread_452030,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_1009337,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_2060889,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_2060889,Lost & Found,auto_handle,"Matched configured pattern(s): phone, stole"
 thread_2972916,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_2970775,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_960510,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_106189,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_960510,UberEATS Order Issue,auto_handle,Matched configured pattern(s): ubereats
+thread_106189,Ride & Pickup Issue,auto_handle,Matched configured pattern(s): minutes away
 thread_339178,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_379539,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_379539,Promotions & Discounts,auto_handle,Matched configured pattern(s): promo
 thread_1964327,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_452052,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_1823303,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_1232373,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_1823303,Lost & Found,auto_handle,Matched configured pattern(s): lost
+thread_1232373,Payment & Charges,auto_handle,Matched configured pattern(s): refund
 thread_1344706,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_735779,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_2624519,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
@@ -191,11 +191,11 @@ thread_1292172,Unmatched,escalate,No configured keyword or regex matched; simple
 thread_919009,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_1861722,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_2399044,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_277306,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_174990,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_277306,Account & Login,auto_handle,Matched configured pattern(s): account
+thread_174990,Account & Login,auto_handle,Matched configured pattern(s): account
 thread_2718107,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_2541813,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_2555501,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_778,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
 thread_1417420,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
-thread_705532,Unmatched,escalate,No configured keyword or regex matched; simple rule requires escalation.
+thread_705532,App & Technical Issue,auto_handle,Matched configured pattern(s): app

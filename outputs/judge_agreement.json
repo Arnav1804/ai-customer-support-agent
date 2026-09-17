@@ -1,0 +1,25 @@
+{
+  "human_rows": 30,
+  "per_criterion": {
+    "relevance": {
+      "comparable_scores": 30,
+      "pearson_correlation": 0.1677819812449911,
+      "exact_match_rate": 0.4
+    },
+    "groundedness": {
+      "comparable_scores": 30,
+      "pearson_correlation": 0.05517372590682455,
+      "exact_match_rate": 0.26666666666666666
+    },
+    "tone": {
+      "comparable_scores": 30,
+      "pearson_correlation": -0.40001045185397194,
+      "exact_match_rate": 0.13333333333333333
+    }
+  },
+  "overall": {
+    "comparable_scores": 90,
+    "pearson_correlation": 0.1174492046461955,
+    "exact_match_rate": 0.26666666666666666
+  }
+}

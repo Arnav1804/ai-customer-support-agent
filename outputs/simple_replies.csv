@@ -1,185 +1,185 @@
 thread_id,predicted_intent,predicted_reply
 thread_1399441,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_998783,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_998783,Account & Login,I’m sorry you’re having trouble accessing your account. Please use the account-help options in the Uber app so the support team can safely review it.
 thread_305336,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_2107513,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_433700,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_973160,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_1445631,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_1048197,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_1048197,App & Technical Issue,"I’m sorry the app is not working as expected. Please update the app and try again; if the problem continues, contact in-app support with the error details."
 thread_356154,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_1703153,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_2637022,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_384104,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2730523,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_1231012,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_2730523,Lost & Found,I’m sorry you are missing an item. Please use the trip in the Uber app to start the lost-item process and contact the driver safely.
+thread_1231012,Account & Login,I’m sorry you’re having trouble accessing your account. Please use the account-help options in the Uber app so the support team can safely review it.
 thread_859680,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_2827699,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_796461,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_1392485,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_562395,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_1234810,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_562395,Account & Login,I’m sorry you’re having trouble accessing your account. Please use the account-help options in the Uber app so the support team can safely review it.
+thread_1234810,App & Technical Issue,"I’m sorry the app is not working as expected. Please update the app and try again; if the problem continues, contact in-app support with the error details."
 thread_889605,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_601789,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_2891182,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_1633284,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_904735,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2782113,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_1467468,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2806743,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_1633284,UberEATS Order Issue,I’m sorry there was an issue with your Uber Eats order. Please open the order in the app and use Help to report the problem.
+thread_904735,UberEATS Order Issue,I’m sorry there was an issue with your Uber Eats order. Please open the order in the app and use Help to report the problem.
+thread_2782113,Payment & Charges,"I’m sorry about the charge. Please review the trip receipt and payment method in the Uber app, then contact support from the trip for account-specific help."
+thread_1467468,App & Technical Issue,"I’m sorry the app is not working as expected. Please update the app and try again; if the problem continues, contact in-app support with the error details."
+thread_2806743,UberEATS Order Issue,I’m sorry there was an issue with your Uber Eats order. Please open the order in the app and use Help to report the problem.
 thread_2798522,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2379053,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_270406,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_1428654,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2112993,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2954602,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2976083,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_1778321,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_2379053,Account & Login,I’m sorry you’re having trouble accessing your account. Please use the account-help options in the Uber app so the support team can safely review it.
+thread_270406,UberEATS Order Issue,I’m sorry there was an issue with your Uber Eats order. Please open the order in the app and use Help to report the problem.
+thread_1428654,UberEATS Order Issue,I’m sorry there was an issue with your Uber Eats order. Please open the order in the app and use Help to report the problem.
+thread_2112993,UberEATS Order Issue,I’m sorry there was an issue with your Uber Eats order. Please open the order in the app and use Help to report the problem.
+thread_2954602,Fare & Pricing Issue,I’m sorry the fare or pricing was unexpected. Please review the trip receipt in the Uber app and contact support from that trip if you need help.
+thread_2976083,App & Technical Issue,"I’m sorry the app is not working as expected. Please update the app and try again; if the problem continues, contact in-app support with the error details."
+thread_1778321,Payment & Charges,"I’m sorry about the charge. Please review the trip receipt and payment method in the Uber app, then contact support from the trip for account-specific help."
 thread_2057316,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_2294391,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_1815312,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_1626295,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_1404914,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_1821916,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_1626295,Payment & Charges,"I’m sorry about the charge. Please review the trip receipt and payment method in the Uber app, then contact support from the trip for account-specific help."
+thread_1404914,Lost & Found,I’m sorry you are missing an item. Please use the trip in the Uber app to start the lost-item process and contact the driver safely.
+thread_1821916,App & Technical Issue,"I’m sorry the app is not working as expected. Please update the app and try again; if the problem continues, contact in-app support with the error details."
 thread_1833563,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2071675,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_663963,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_2071675,Driver Issue,I’m sorry about your experience with the driver. Please use the trip in the Uber app to share the details so the support team can review it.
+thread_663963,UberEATS Order Issue,I’m sorry there was an issue with your Uber Eats order. Please open the order in the app and use Help to report the problem.
 thread_952636,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_441669,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_572012,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_441669,UberEATS Order Issue,I’m sorry there was an issue with your Uber Eats order. Please open the order in the app and use Help to report the problem.
+thread_572012,Payment & Charges,"I’m sorry about the charge. Please review the trip receipt and payment method in the Uber app, then contact support from the trip for account-specific help."
 thread_2794435,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_2816686,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2171780,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2933982,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2538520,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2460069,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2727142,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2882279,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2920570,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2177615,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2984666,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2479164,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2388092,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2609401,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2487367,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2344050,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_2171780,Account & Login,I’m sorry you’re having trouble accessing your account. Please use the account-help options in the Uber app so the support team can safely review it.
+thread_2933982,Ride & Pickup Issue,I’m sorry there was a problem with the ride or pickup. Please review the trip in the Uber app and contact support from it with the relevant details.
+thread_2538520,App & Technical Issue,"I’m sorry the app is not working as expected. Please update the app and try again; if the problem continues, contact in-app support with the error details."
+thread_2460069,Driver Issue,I’m sorry about your experience with the driver. Please use the trip in the Uber app to share the details so the support team can review it.
+thread_2727142,Lost & Found,I’m sorry you are missing an item. Please use the trip in the Uber app to start the lost-item process and contact the driver safely.
+thread_2882279,Payment & Charges,"I’m sorry about the charge. Please review the trip receipt and payment method in the Uber app, then contact support from the trip for account-specific help."
+thread_2920570,Ride & Pickup Issue,I’m sorry there was a problem with the ride or pickup. Please review the trip in the Uber app and contact support from it with the relevant details.
+thread_2177615,Payment & Charges,"I’m sorry about the charge. Please review the trip receipt and payment method in the Uber app, then contact support from the trip for account-specific help."
+thread_2984666,Lost & Found,I’m sorry you are missing an item. Please use the trip in the Uber app to start the lost-item process and contact the driver safely.
+thread_2479164,Payment & Charges,"I’m sorry about the charge. Please review the trip receipt and payment method in the Uber app, then contact support from the trip for account-specific help."
+thread_2388092,UberEATS Order Issue,I’m sorry there was an issue with your Uber Eats order. Please open the order in the app and use Help to report the problem.
+thread_2609401,Lost & Found,I’m sorry you are missing an item. Please use the trip in the Uber app to start the lost-item process and contact the driver safely.
+thread_2487367,Payment & Charges,"I’m sorry about the charge. Please review the trip receipt and payment method in the Uber app, then contact support from the trip for account-specific help."
+thread_2344050,Account & Login,I’m sorry you’re having trouble accessing your account. Please use the account-help options in the Uber app so the support team can safely review it.
 thread_443131,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_2194049,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_583010,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_454650,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2823454,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_583010,App & Technical Issue,"I’m sorry the app is not working as expected. Please update the app and try again; if the problem continues, contact in-app support with the error details."
+thread_454650,App & Technical Issue,"I’m sorry the app is not working as expected. Please update the app and try again; if the problem continues, contact in-app support with the error details."
+thread_2823454,Fare & Pricing Issue,I’m sorry the fare or pricing was unexpected. Please review the trip receipt in the Uber app and contact support from that trip if you need help.
 thread_1362014,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_1965700,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_55980,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_2642829,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_954951,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_954951,Payment & Charges,"I’m sorry about the charge. Please review the trip receipt and payment method in the Uber app, then contact support from the trip for account-specific help."
 thread_1209936,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_436527,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_412278,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_1417274,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2078219,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_1213584,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_436527,App & Technical Issue,"I’m sorry the app is not working as expected. Please update the app and try again; if the problem continues, contact in-app support with the error details."
+thread_412278,Account & Login,I’m sorry you’re having trouble accessing your account. Please use the account-help options in the Uber app so the support team can safely review it.
+thread_1417274,Driver Issue,I’m sorry about your experience with the driver. Please use the trip in the Uber app to share the details so the support team can review it.
+thread_2078219,App & Technical Issue,"I’m sorry the app is not working as expected. Please update the app and try again; if the problem continues, contact in-app support with the error details."
+thread_1213584,Ride & Pickup Issue,I’m sorry there was a problem with the ride or pickup. Please review the trip in the Uber app and contact support from it with the relevant details.
 thread_2652753,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_707603,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_1627649,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_814953,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_607442,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2408910,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_814953,App & Technical Issue,"I’m sorry the app is not working as expected. Please update the app and try again; if the problem continues, contact in-app support with the error details."
+thread_607442,UberEATS Order Issue,I’m sorry there was an issue with your Uber Eats order. Please open the order in the app and use Help to report the problem.
+thread_2408910,UberEATS Order Issue,I’m sorry there was an issue with your Uber Eats order. Please open the order in the app and use Help to report the problem.
 thread_1392516,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_895037,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_1475496,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_2512905,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2547353,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2586448,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2806726,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2241749,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_718617,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2724636,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2484347,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2912293,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2381973,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2762792,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2965798,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_520827,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_2547353,Fare & Pricing Issue,I’m sorry the fare or pricing was unexpected. Please review the trip receipt in the Uber app and contact support from that trip if you need help.
+thread_2586448,UberEATS Order Issue,I’m sorry there was an issue with your Uber Eats order. Please open the order in the app and use Help to report the problem.
+thread_2806726,Payment & Charges,"I’m sorry about the charge. Please review the trip receipt and payment method in the Uber app, then contact support from the trip for account-specific help."
+thread_2241749,App & Technical Issue,"I’m sorry the app is not working as expected. Please update the app and try again; if the problem continues, contact in-app support with the error details."
+thread_718617,Payment & Charges,"I’m sorry about the charge. Please review the trip receipt and payment method in the Uber app, then contact support from the trip for account-specific help."
+thread_2724636,UberEATS Order Issue,I’m sorry there was an issue with your Uber Eats order. Please open the order in the app and use Help to report the problem.
+thread_2484347,App & Technical Issue,"I’m sorry the app is not working as expected. Please update the app and try again; if the problem continues, contact in-app support with the error details."
+thread_2912293,App & Technical Issue,"I’m sorry the app is not working as expected. Please update the app and try again; if the problem continues, contact in-app support with the error details."
+thread_2381973,Promotions & Discounts,I’m sorry the promotion or discount did not apply as expected. Please check the promotion terms in the Uber app and contact support if it still looks incorrect.
+thread_2762792,App & Technical Issue,"I’m sorry the app is not working as expected. Please update the app and try again; if the problem continues, contact in-app support with the error details."
+thread_2965798,Safety & Vehicle Concern,Your safety matters. Please use the trip’s in-app safety or help option to report the details so the safety team can review it promptly.
+thread_520827,Payment & Charges,"I’m sorry about the charge. Please review the trip receipt and payment method in the Uber app, then contact support from the trip for account-specific help."
 thread_996961,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_1759722,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2932317,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2637037,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_601804,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_557231,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2686891,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_470912,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2823412,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_470948,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_1759722,UberEATS Order Issue,I’m sorry there was an issue with your Uber Eats order. Please open the order in the app and use Help to report the problem.
+thread_2932317,Lost & Found,I’m sorry you are missing an item. Please use the trip in the Uber app to start the lost-item process and contact the driver safely.
+thread_2637037,Ride & Pickup Issue,I’m sorry there was a problem with the ride or pickup. Please review the trip in the Uber app and contact support from it with the relevant details.
+thread_601804,UberEATS Order Issue,I’m sorry there was an issue with your Uber Eats order. Please open the order in the app and use Help to report the problem.
+thread_557231,App & Technical Issue,"I’m sorry the app is not working as expected. Please update the app and try again; if the problem continues, contact in-app support with the error details."
+thread_2686891,Account & Login,I’m sorry you’re having trouble accessing your account. Please use the account-help options in the Uber app so the support team can safely review it.
+thread_470912,Payment & Charges,"I’m sorry about the charge. Please review the trip receipt and payment method in the Uber app, then contact support from the trip for account-specific help."
+thread_2823412,Payment & Charges,"I’m sorry about the charge. Please review the trip receipt and payment method in the Uber app, then contact support from the trip for account-specific help."
+thread_470948,Payment & Charges,"I’m sorry about the charge. Please review the trip receipt and payment method in the Uber app, then contact support from the trip for account-specific help."
 thread_902458,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_2446460,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_1380760,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_254829,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_254829,App & Technical Issue,"I’m sorry the app is not working as expected. Please update the app and try again; if the problem continues, contact in-app support with the error details."
 thread_1185188,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_635837,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_2541804,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2731489,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2739541,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_1273689,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_1063933,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_1450927,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_2731489,Account & Login,I’m sorry you’re having trouble accessing your account. Please use the account-help options in the Uber app so the support team can safely review it.
+thread_2739541,Account & Login,I’m sorry you’re having trouble accessing your account. Please use the account-help options in the Uber app so the support team can safely review it.
+thread_1273689,Account & Login,I’m sorry you’re having trouble accessing your account. Please use the account-help options in the Uber app so the support team can safely review it.
+thread_1063933,App & Technical Issue,"I’m sorry the app is not working as expected. Please update the app and try again; if the problem continues, contact in-app support with the error details."
+thread_1450927,Lost & Found,I’m sorry you are missing an item. Please use the trip in the Uber app to start the lost-item process and contact the driver safely.
 thread_1541176,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_21985,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_21985,UberEATS Order Issue,I’m sorry there was an issue with your Uber Eats order. Please open the order in the app and use Help to report the problem.
 thread_2241732,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_997265,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_334146,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_235538,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_1327100,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_235538,Payment & Charges,"I’m sorry about the charge. Please review the trip receipt and payment method in the Uber app, then contact support from the trip for account-specific help."
+thread_1327100,Account & Login,I’m sorry you’re having trouble accessing your account. Please use the account-help options in the Uber app so the support team can safely review it.
 thread_332108,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_966757,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_883233,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_966757,Ride & Pickup Issue,I’m sorry there was a problem with the ride or pickup. Please review the trip in the Uber app and contact support from it with the relevant details.
+thread_883233,Payment & Charges,"I’m sorry about the charge. Please review the trip receipt and payment method in the Uber app, then contact support from the trip for account-specific help."
 thread_667887,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_1905339,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_1905339,Payment & Charges,"I’m sorry about the charge. Please review the trip receipt and payment method in the Uber app, then contact support from the trip for account-specific help."
 thread_590073,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_275040,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2414625,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_486874,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_275040,Ride & Pickup Issue,I’m sorry there was a problem with the ride or pickup. Please review the trip in the Uber app and contact support from it with the relevant details.
+thread_2414625,App & Technical Issue,"I’m sorry the app is not working as expected. Please update the app and try again; if the problem continues, contact in-app support with the error details."
+thread_486874,UberEATS Order Issue,I’m sorry there was an issue with your Uber Eats order. Please open the order in the app and use Help to report the problem.
 thread_1617866,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_479793,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2145766,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_129433,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2339250,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_479793,Payment & Charges,"I’m sorry about the charge. Please review the trip receipt and payment method in the Uber app, then contact support from the trip for account-specific help."
+thread_2145766,Driver Issue,I’m sorry about your experience with the driver. Please use the trip in the Uber app to share the details so the support team can review it.
+thread_129433,Promotions & Discounts,I’m sorry the promotion or discount did not apply as expected. Please check the promotion terms in the Uber app and contact support if it still looks incorrect.
+thread_2339250,Driver Issue,I’m sorry about your experience with the driver. Please use the trip in the Uber app to share the details so the support team can review it.
 thread_1453816,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_645050,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_1265277,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_79360,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2762934,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2713271,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2445339,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2207958,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2960615,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_1822421,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2552581,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_645050,Account & Login,I’m sorry you’re having trouble accessing your account. Please use the account-help options in the Uber app so the support team can safely review it.
+thread_1265277,Payment & Charges,"I’m sorry about the charge. Please review the trip receipt and payment method in the Uber app, then contact support from the trip for account-specific help."
+thread_79360,Payment & Charges,"I’m sorry about the charge. Please review the trip receipt and payment method in the Uber app, then contact support from the trip for account-specific help."
+thread_2762934,Payment & Charges,"I’m sorry about the charge. Please review the trip receipt and payment method in the Uber app, then contact support from the trip for account-specific help."
+thread_2713271,App & Technical Issue,"I’m sorry the app is not working as expected. Please update the app and try again; if the problem continues, contact in-app support with the error details."
+thread_2445339,Lost & Found,I’m sorry you are missing an item. Please use the trip in the Uber app to start the lost-item process and contact the driver safely.
+thread_2207958,App & Technical Issue,"I’m sorry the app is not working as expected. Please update the app and try again; if the problem continues, contact in-app support with the error details."
+thread_2960615,Account & Login,I’m sorry you’re having trouble accessing your account. Please use the account-help options in the Uber app so the support team can safely review it.
+thread_1822421,Lost & Found,I’m sorry you are missing an item. Please use the trip in the Uber app to start the lost-item process and contact the driver safely.
+thread_2552581,Lost & Found,I’m sorry you are missing an item. Please use the trip in the Uber app to start the lost-item process and contact the driver safely.
 thread_232607,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_317312,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_1106703,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_317312,Payment & Charges,"I’m sorry about the charge. Please review the trip receipt and payment method in the Uber app, then contact support from the trip for account-specific help."
+thread_1106703,UberEATS Order Issue,I’m sorry there was an issue with your Uber Eats order. Please open the order in the app and use Help to report the problem.
 thread_902451,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_683181,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_683181,Fare & Pricing Issue,I’m sorry the fare or pricing was unexpected. Please review the trip receipt in the Uber app and contact support from that trip if you need help.
 thread_992142,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_854616,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_854616,UberEATS Order Issue,I’m sorry there was an issue with your Uber Eats order. Please open the order in the app and use Help to report the problem.
 thread_2969623,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_1660114,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_1893070,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_1660114,Account & Login,I’m sorry you’re having trouble accessing your account. Please use the account-help options in the Uber app so the support team can safely review it.
+thread_1893070,UberEATS Order Issue,I’m sorry there was an issue with your Uber Eats order. Please open the order in the app and use Help to report the problem.
 thread_725970,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_1451656,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_1451656,App & Technical Issue,"I’m sorry the app is not working as expected. Please update the app and try again; if the problem continues, contact in-app support with the error details."
 thread_452030,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_1009337,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_2060889,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_2060889,Lost & Found,I’m sorry you are missing an item. Please use the trip in the Uber app to start the lost-item process and contact the driver safely.
 thread_2972916,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_2970775,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_960510,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_106189,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_960510,UberEATS Order Issue,I’m sorry there was an issue with your Uber Eats order. Please open the order in the app and use Help to report the problem.
+thread_106189,Ride & Pickup Issue,I’m sorry there was a problem with the ride or pickup. Please review the trip in the Uber app and contact support from it with the relevant details.
 thread_339178,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_379539,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_379539,Promotions & Discounts,I’m sorry the promotion or discount did not apply as expected. Please check the promotion terms in the Uber app and contact support if it still looks incorrect.
 thread_1964327,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_452052,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_1823303,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_1232373,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_1823303,Lost & Found,I’m sorry you are missing an item. Please use the trip in the Uber app to start the lost-item process and contact the driver safely.
+thread_1232373,Payment & Charges,"I’m sorry about the charge. Please review the trip receipt and payment method in the Uber app, then contact support from the trip for account-specific help."
 thread_1344706,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_735779,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_2624519,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
@@ -191,11 +191,11 @@ thread_1292172,Unmatched,I’m sorry you’re having trouble. A support speciali
 thread_919009,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_1861722,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_2399044,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_277306,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_174990,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_277306,Account & Login,I’m sorry you’re having trouble accessing your account. Please use the account-help options in the Uber app so the support team can safely review it.
+thread_174990,Account & Login,I’m sorry you’re having trouble accessing your account. Please use the account-help options in the Uber app so the support team can safely review it.
 thread_2718107,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_2541813,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_2555501,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_778,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
 thread_1417420,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
-thread_705532,Unmatched,I’m sorry you’re having trouble. A support specialist will review your message and help with the next step.
+thread_705532,App & Technical Issue,"I’m sorry the app is not working as expected. Please update the app and try again; if the problem continues, contact in-app support with the error details."

@@ -132,7 +132,7 @@ def main() -> None:
     parser.add_argument("--metrics-output", default="outputs/classification_metrics.json")
     parser.add_argument("--judge-summary", default="outputs/judge_summary.json")
     parser.add_argument("--agreement", default="outputs/judge_agreement.json")
-    parser.add_argument("--results-output", default="outputs/results_table.csv")
+    parser.add_argument("--results-output", "--output", default="outputs/results_table.csv")
     args = parser.parse_args()
 
     golden = read_csv_by_thread(args.golden)

@@ -1,4 +1,4 @@
 system,intent_accuracy,intent_f1_macro,escalation_accuracy,avg_judge_score,judge_human_agreement_main_pipeline_only
-main pipeline,,,,,
-simple baseline,0.0000,0.0000,0.5400,,
+main pipeline,0.4923,0.4562,0.4900,2.9333,0.1174
+simple baseline,0.5231,0.5312,0.4250,,
 trivial baseline,0.1769,0.0301,0.5400,,

@@ -108,9 +108,12 @@ def main() -> None:
     parser.add_argument("--human", default="evaluation/human_judgements.csv",
                         help="Manual CSV with thread_id plus relevance, groundedness, and tone scores (1-5)")
     parser.add_argument("--judge", default="outputs/main_pipeline_judgements.csv")
+    parser.add_argument("--predictions", default="outputs/pipeline_predictions.csv")
+    parser.add_argument("--sample", default="data/processed/uber_support_sample.csv")
     parser.add_argument("--output", default="outputs/judge_agreement.json")
-    parser.add_argument("--make-template", action="store_true", help="Create a blank 30-reply human scoring sheet and exit")
-    parser.add_argument("--count", type=int, default=30, help="Template rows when --make-template is used")
+    parser.add_argument("--make-template", nargs="?", const="evaluation/human_judgements.csv", default=None,
+                        help="Create a blank 30-reply human scoring sheet and exit")
+    parser.add_argument("--count", "--max-rows", dest="count", type=int, default=30, help="Template rows when --make-template is used")
     parser.add_argument("--seed", type=int, default=7, help="Template sampling seed")
     parser.add_argument("--metrics", default="outputs/classification_metrics.json")
     parser.add_argument("--judge-summary", default="outputs/judge_summary.json")
@@ -119,14 +122,35 @@ def main() -> None:
     if args.count < 1:
         parser.error("--count must be positive")
 
-    try:
-        judge = read_rows(args.judge)
-    except FileNotFoundError as exc:
-        raise SystemExit(f"Judge file not found: {exc}. Run llm_judge.py first.") from exc
-    human_path = Path(args.human)
-    if args.make_template:
+    judge_path = Path(args.judge)
+    if not judge_path.exists() and Path("outputs/pipeline_judgements.csv").exists():
+        judge_path = Path("outputs/pipeline_judgements.csv")
+
+    judge: dict[str, dict[str, str]] = {}
+    if judge_path.exists():
+        judge = read_rows(judge_path)
+
+    human_path = Path(args.make_template) if (args.make_template and isinstance(args.make_template, str) and args.make_template != "evaluation/human_judgements.csv") else Path(args.human)
+    if args.make_template is not None:
+        if not judge and Path(args.predictions).exists():
+            preds = read_rows(Path(args.predictions))
+            judge = {
+                tid: {
+                    "thread_id": tid,
+                    "message_text": r.get("message_text", ""),
+                    "reply_text": r.get("drafted_reply", ""),
+                    "retrieved_thread_ids": r.get("retrieved_thread_ids", ""),
+                    "judge_status": "completed",
+                }
+                for tid, r in preds.items()
+            }
+        if not judge:
+            raise SystemExit(f"Judge file not found: {judge_path}. Run llm_judge.py first.")
         write_human_template(judge, human_path, args.count, args.seed)
         return
+
+    if not judge:
+        raise SystemExit(f"Judge file not found: {judge_path}. Run llm_judge.py first.")
     try:
         human = read_rows(human_path)
     except FileNotFoundError as exc:
